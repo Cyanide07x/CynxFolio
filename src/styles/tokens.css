@@ -1,0 +1,62 @@
+/* ==========================================================================
+   CYNX FOLIO — DESIGN TOKENS
+   Strict adherence to the Brand Identity:
+   - Sharp, angular, low-poly crimson shards
+   - No rounded corners (only diagonal chamfer cuts)
+   - Colors: #0A0508, #130A0F, #E5063F, #FF2D63, #7A0628, #F5EEF1, #BDB2B7, #B8B0B3
+   ========================================================================== */
+
+:root {
+  /* Palette */
+  --bg: #0A0508;
+  --surface: #130A0F;
+  --surface-raised: #1C0F17;
+  --crimson: #E5063F;
+  --bright-crimson: #FF2D63;
+  --deep-maroon: #7A0628;
+  --ivory: #F5EEF1;
+  --muted: #BDB2B7;
+  --light-gray-shard: #B8B0B3;
+
+  /* Alpha Overlays & Borders */
+  --border-subtle: rgba(229, 6, 63, 0.22);
+  --border-bright: rgba(255, 45, 99, 0.55);
+  --glow-crimson: rgba(229, 6, 63, 0.4);
+  --glow-bright: rgba(255, 45, 99, 0.65);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, Monaco, Consolas, monospace;
+
+  /* Spacing */
+  --page-padding: 96px;
+  --section-gap: 160px;
+
+  /* Motion & Easing */
+  --ease-snap: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-fast: 160ms var(--ease-snap);
+  --transition-normal: 280ms var(--ease-snap);
+  --transition-slow: 480ms var(--ease-snap);
+
+  /* Diagonal Corner Cut Presets (No rounded corners!) */
+  --cut-sm: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+  --cut-md: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
+  --cut-lg: polygon(0 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%);
+  --cut-both: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --page-padding: 40px;
+    --section-gap: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-padding: 24px;
+    --section-gap: 84px;
+  }
+}
